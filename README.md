@@ -1,6 +1,8 @@
 # simpleGPIO
 Basic script to trigger a Raspberry Pi GPIO pin.
 
+![simpleGPIO](https://github.com/user-attachments/assets/8e2e06c5-2fb8-4d0f-a8c5-d2627f00f278)
+
 ## Setup
 - Clips are colored wires with alligator clips with a DuPont connector
   - Amazon: https://a.co/d/iVMrlcs
