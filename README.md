@@ -6,7 +6,7 @@ Basic script to trigger a Raspberry Pi GPIO pin.
 ## Setup
 - Clips are colored wires with alligator clips with a DuPont connector
   - Amazon: https://a.co/d/iVMrlcs
-- Reststor means resistors...
+- Resitstor means resistors...
   - Amazon: https://a.co/d/1mahULF
 - PWR: Red clip to pin 1 (3.3v) with 330 ohm resistor
 - GRD: Black clip to pin 34 (gnd) with 1K ohm resistor
