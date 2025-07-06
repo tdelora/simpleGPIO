@@ -10,7 +10,7 @@ Basic script to trigger a Raspberry Pi GPIO pin.
   - Amazon: https://a.co/d/1mahULF
 - PWR: Red clip to pin 1 (3.3v) with 330 ohm resistor
 - GRD: Black clip to pin 34 (gnd) with 1K ohm resistor
-- SWC: Blue clip to pin 16SWC: Blue clip to pin 16
+- SWC: Blue clip to pin 16
 
 ## Execution
 After starting the script:
