@@ -14,8 +14,8 @@ Basic script to trigger a Raspberry Pi GPIO pin.
 
 ## Execution
 After starting the script:
-- Touch SWC to PWR to trigger HIGH
-- Touch SWC to GRD to trigger LOW
+- Touch SWC to resistor on PWR to trigger HIGH
+- Touch SWC to resistor on GRD to trigger LOW
 
 ## Notes:
 - Using GPIO.PUD_DOWN in GPIO.setup should keep pin in low state when SWC is not touching PWR. I have seen the pin jump to high when SWC not connected to either PWR or GND.
