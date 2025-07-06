@@ -16,8 +16,8 @@ GPIO.setmode(GPIO.BCM)
 # SWC: Blue clip to pin 16
 #
 # After starting the script:
-#  - touch SWC to PWR to trigger HIGH
-#  - Touch SWC to GRD to trigger LOW
+#  - touch SWC to resistor on PWR to trigger HIGH
+#  - Touch SWC to resistor on GRD to trigger LOW
 
 # Define the GPIO pin you want to monitor
 gpioPin = 16
