@@ -4,16 +4,16 @@ Basic script to trigger a Raspberry Pi GPIO pin.
 ![simpleGPIO](https://github.com/user-attachments/assets/8e2e06c5-2fb8-4d0f-a8c5-d2627f00f278)
 
 ## Setup
-- Clips are colored wires with alligator clips with a DuPont connector
+- Clips are colored wires with alligator clips and a DuPont connector
   - Amazon: https://a.co/d/iVMrlcs
-- Resistor means resistors...
+- Resistor means resistor...
   - Amazon: https://a.co/d/1mahULF
 - PWR: Red clip to pin 1 (3.3v) with 330 ohm resistor
 - GRD: Black clip to pin 34 (gnd) with 1K ohm resistor
 - SWC: Blue clip to pin 16SWC: Blue clip to pin 16
 
 ## Execution
-After starting script:
+After starting the script:
 - Touch SWC to PWR to trigger HIGH
 - Touch SWC to GRD to trigger LOW
 
