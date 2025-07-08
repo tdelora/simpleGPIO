@@ -25,7 +25,7 @@ After starting the script:
 
 ![IMG_8785_princess](https://github.com/user-attachments/assets/225b8060-4fc1-4ff3-80fa-fedf3d4e5d05)
 
-In this example, the PWR and SWC clips have been attached to a Bell System 702BM (Princess) dial telephone, which is connected to the wires that turn on the night light when the handset is off the hook. From the phone, the blue wire has been disconnected from terminal 4 and connected to the PWR clip resistor using a red wire with two alligator clips; the orange wire has been disconnected from terminal 2 and connected to the SWC clip directly. Take the handset off the hook to trigger HIGH, and place the handset on the hook to trigger LOW. The GND clip is not utilized in this setup.
+In this example, the PWR and SWC clips have been attached to a Bell System 702BM (Princess) dial telephone, connected to the wires that turn on the night light when the handset is off the hook. From the phone, the blue wire has been disconnected from terminal 4 and connected to the PWR clip resistor using a red wire with two alligator clips; the orange wire has been disconnected from terminal 2 and connected to the SWC clip directly. Take the handset off the hook to trigger HIGH, and place the handset on the hook to trigger LOW. The GND clip is not utilized in this setup.
 
 Snapshot from the wiring diagram of a Bell System 702BM (Princess) phone showing the utilized orange and blue wires.
 
