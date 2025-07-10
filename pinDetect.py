@@ -29,11 +29,11 @@ GPIO.setup(gpioPin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 try: 
 
   #
-  # Function piniEventCallback is called when GPIO.add_event_detect (below)
+  # Function pinEventCallback is called when GPIO.add_event_detect (below)
   # detects an event on gpioPin.
   #
 
-  def piniEventCallback(channel):
+  def pinEventCallback(channel):
       if GPIO.input(channel):
           print(f"Pin {gpioPin} is HIGH")
       else:
@@ -47,7 +47,7 @@ try:
     print(f"Pin {gpioPin} initial state is LOW")
 
   # Add event detection for gpioPin for subsequent gpioPin state changes.
-  GPIO.add_event_detect(gpioPin, GPIO.BOTH, callback=piniEventCallback, bouncetime=200)
+  GPIO.add_event_detect(gpioPin, GPIO.BOTH, callback=pinEventCallback, bouncetime=200)
 
   print(f"Ready for events on GPIO pin {gpioPin}.")
 
