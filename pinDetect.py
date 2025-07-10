@@ -1,5 +1,5 @@
 import RPi.GPIO as GPIO
-import time
+import signal, time
 
 # Set pin numbering mode
 GPIO.setmode(GPIO.BCM)
@@ -24,20 +24,37 @@ gpioPin = 16
 
 # Set the pin, using GPIO.PUD_DOWN in GPIO.setup should keep the pin state low
 # when SWC is not touching PWR.
-GPIO.setup(gpioPin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) 
+GPIO.setup(gpioPin, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
-try:
-    while True:
-        # Read the pin's state
-        pin_state = GPIO.input(gpioPin)
+try: 
 
-        # Print the state
-        if pin_state == GPIO.HIGH:
-            print(f"Pin {gpioPin} is HIGH")
-        else:
-            print(f"Pin {gpioPin} is LOW")
+  #
+  # Function piniEventCallback is called when GPIO.add_event_detect (below)
+  # detects an event on gpioPin.
+  #
 
-        time.sleep(0.5) # Add a small delay to avoid flooding the output
+  def piniEventCallback(channel):
+      if GPIO.input(channel):
+          print(f"Pin {gpioPin} is HIGH")
+      else:
+          print(f"Pin {gpioPin} is LOW")
+
+  # Read gpioPin's initial state at startup
+  pin_state = GPIO.input(gpioPin)
+  if pin_state == GPIO.HIGH:
+    print(f"Pin {gpioPin} initial state is HIGH")
+  else:
+    print(f"Pin {gpioPin} initial state is LOW")
+
+  # Add event detection for gpioPin for subsequent gpioPin state changes.
+  GPIO.add_event_detect(gpioPin, GPIO.BOTH, callback=piniEventCallback, bouncetime=200)
+
+  print(f"Ready for events on GPIO pin {gpioPin}.")
+
+  # Use signal.pause() to keep from exiting until signaled.
+  signal.pause()
 
 except KeyboardInterrupt:
-    GPIO.cleanup() # Clean up GPIO on script exit
+    print("Exiting...")
+finally:
+    GPIO.cleanup()
